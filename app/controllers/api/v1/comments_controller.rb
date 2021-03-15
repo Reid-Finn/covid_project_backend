@@ -4,12 +4,15 @@ class Api::V1::CommentsController < ApplicationController
     
     
     def index
+       
         comments = Comment.all
         render json: CommentSerializer.new(comments)
     end
 
-    def create
-        comment = Comment.new(comment_params)
+    def create(statename)
+        state = State.Find_by(name: statename)
+        byebug
+        comment = state.comment.new(comment_params)
         if comment.save
             render json: CommentSerializer.new(comment), status: :accepted
         else
@@ -22,7 +25,7 @@ class Api::V1::CommentsController < ApplicationController
     private
 
     def comment_params
-        params.require(:comment).permit(:text)
+        params.require(:comment).permit(:context)
     end
 
 

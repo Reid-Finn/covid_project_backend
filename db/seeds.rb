@@ -59,3 +59,4 @@ State.create(name: 'ALASKA')
 State.create(name: 'MISSISSIPPI')
 
 Comment.create(context:"This is a test comment for Florida", state_id: fl.id )
+Comment.create(context:"Testing for Florida", state_id: fl.id )
