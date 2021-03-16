@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     
     end
   end
+  get '/api/v1/comments/states/:name', to: 'api/v1/comments#get_states' 
 end
