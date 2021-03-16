@@ -12,7 +12,6 @@ class Api::V1::CommentsController < ApplicationController
     def create
         state = State.find_by(name: params[:statename].upcase)
         comment = state.comments.new(comment_params)
-        byebug
         if comment.save
             render json: CommentSerializer.new(comment), status: :accepted
         else
@@ -20,8 +19,7 @@ class Api::V1::CommentsController < ApplicationController
         end
     end
 
-    def get_states
-        
+    def get_states 
         state = State.find_by(name: params[:name].upcase)
         comments = state.comments
         render json: comments

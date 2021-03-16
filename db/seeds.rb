@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-State.create(name: 'Texas')
-State.create(name: 'Missouri')
-State.create(name: 'Vermont')
+State.create(name: 'TEXAS')
+State.create(name: 'MISSOURI')
+State.create(name: 'VERMONT')
 State.create(name: 'MINNESOTA')
 State.create(name: 'DELAWARE')
 State.create(name: 'MICHIGAN')
