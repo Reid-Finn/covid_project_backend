@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-State.create(name: 'TEXAS')
+tx = State.create(name: 'TEXAS')
 State.create(name: 'MISSOURI')
 State.create(name: 'VERMONT')
 State.create(name: 'MINNESOTA')
@@ -58,5 +58,7 @@ State.create(name: 'MONTANA')
 State.create(name: 'ALASKA')
 State.create(name: 'MISSISSIPPI')
 
-Comment.create(context:"This is a test comment for Florida", state_id: fl.id )
-Comment.create(context:"Testing for Florida", state_id: fl.id )
+Comment.create(context:"Wow! So many cases!", state_id: fl.id )
+Comment.create(context:"Thanks Spring Break....", state_id: fl.id )
+Comment.create(context:"YeeeeHawwwwww Open TX back up!", state_id: tx.id )
+Comment.create(context:"Gov. said Covid is over!", state_id: tx.id )
